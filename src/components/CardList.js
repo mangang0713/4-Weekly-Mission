@@ -1,5 +1,7 @@
 import "../assets/styles/CardList.css";
 import logo from "../assets/images/logo.png";
+import star from "../assets/images/star.svg";
+import kebab from "../assets/images/kebab.svg";
 
 const formatDate = (value) => {
   const date = new Date(value);
@@ -43,6 +45,7 @@ const CardItem = ({ link }) => {
       {imageSource ? (
         <div className="card_img">
           <img id="img_logo" src={imageSource} alt={title} />
+          <img id="star" src={star} alt="별표" />
         </div>
       ) : (
         <div className="card_img no_img">
@@ -50,7 +53,10 @@ const CardItem = ({ link }) => {
         </div>
       )}
       <div className="card_contents">
-        <a id="card_created_time">{caculateTime(createdAt)}</a>
+        <div className="created_at">
+          <a id="card_created_time">{caculateTime(createdAt)}</a>
+          <img id="kebab" src={kebab} alt="케밥" />
+        </div>
         <a id="card_description">{description}</a>
         <p id="card_date">{formatDate(createdAt)}</p>
       </div>
