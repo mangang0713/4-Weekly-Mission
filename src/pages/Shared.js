@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import Nav from "../components/Navbar";
+import Nav from "../common/Navbar";
 import { getFolderData, getUserInfo } from "../api";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import SearchBar from "../components/SearchBar";
+import SearchBar from "../common/SearchBar";
 import CardList from "../components/CardList";
 
 function Shared() {
